@@ -33,9 +33,17 @@ function add(){
   /*ahora hay que agregar el newcomments al div cont*/
   cont.appendChild(newComments);
 
-  /*usando eventos para cuando se haga click pase algo*/
+  /*usando eventos para cuando se haga click pase algo (escuchando el evento)*/
   check.addEventListener('click',function(){
     /*para rayar el parrafo, toggle cambia alguna característica*/
     paragraph.classList.toggle('strike-out');
   })
+  /*para borrar cuando se presiona el basurero*/
+  trash.addEventListener('click',function(){
+    cont.removeChild(newComments);
+  })
+  heart.addEventListener('click',function(){
+    heart.classList.toggle('red');
+  })
+  /*validacion de cuando este vacio no se agrege*/
 }
